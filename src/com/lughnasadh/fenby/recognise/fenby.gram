@@ -1,0 +1,22 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for the JSGF Demo
+ */
+
+grammar fenby;
+
+/**
+ * Grammar for Fenby dictation system
+ */
+
+public <fenby> =     start recording  |
+                     stop | 
+                     play |
+                     next |
+                     back |
+                     first |
+                     last |
+                     delete |
+                     yes |
+                     no;
