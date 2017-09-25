@@ -26,7 +26,7 @@ public class Fenby {
 			} catch (InterruptedException e) {}
 		}*/
 		//be sure to shutdown TinySound when done
-		TinySound.shutdown();
+		//TinySound.shutdown();
 		
 		
 		
