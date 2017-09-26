@@ -12,6 +12,23 @@ public class Producer implements Runnable {
     @Override
     public void run() {
         //produce messages
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
         for(int i=0; i<100; i++){
             Message msg = new Message(""+i);
             try {
