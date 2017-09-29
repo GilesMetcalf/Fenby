@@ -1,5 +1,12 @@
 package com.lughnasadh.fenby;
 
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
+import com.lughnasadh.fenby.announce.Announcer;
+import com.lughnasadh.fenby.announce.SpeechPlayer;
+import com.lughnasadh.fenby.test.FakeUI;
+
 import kuusisto.tinysound.Music;
 import kuusisto.tinysound.Sound;
 import kuusisto.tinysound.TinySound;
@@ -7,27 +14,18 @@ import kuusisto.tinysound.TinySound;
 public class Fenby {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//Boot up config
+		
+		//Start up fake UI... (Needs to be replaced with RaspPi GPIO setup)
+		FakeUI fui = new FakeUI();
+		
+		//Set up speech stuff..
+		Announcer announcer = Announcer.getInstance();
+		announcer.playItem("welcome",500);
 
+		//Set up recogniser
 		
-		//initialize TinySound
-		TinySound.init();
-		//load a sound and music
-/*		//note: you can also load with Files, URLs and InputStreams
-		Music song = TinySound.loadMusic("song.wav");
-		Sound coin = TinySound.loadSound("coin.wav");
-		//start playing the music on loop
-		song.play(true);
-		//play the sound a few times in a loop
-		for (int i = 0; i < 20; i++) {
-			coin.play();
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {}
-		}*/
-		//be sure to shutdown TinySound when done
-		//TinySound.shutdown();
-		
+
 		
 		
 		
